@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./project_card.css";
 
 export default function ProjectCard(props) {
