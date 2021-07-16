@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import PageTitle from "../general/titles/PageTitle";
 import ProjectList from "./ProjectList";
 

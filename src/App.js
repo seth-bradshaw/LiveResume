@@ -6,7 +6,6 @@ import BioPage from './components/bio/BioPage';
 import SkillsPage from './components/skills/SkillsPage';
 import ProjectPage from './components/projects/ProjectPage';
 import Footer from './components/navigation/Footer';
-import { Route, Switch } from 'react-router-dom';
 import './index.css'
 
 const [red, green, blue] = [81, 226, 245]
