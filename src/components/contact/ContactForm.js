@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FormBanner from "./FormBanner";
 
 const initialFormState = {
   firstName: "",
@@ -10,42 +11,66 @@ const initialFormState = {
 
 export default function ContactForm() {
   const [form, setForm] = useState(initialFormState);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submissionErrored, setSubmissionErrored] = useState(false);
+  const [errorMessage, setErrorMessage] = useState();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    const template = process.env.REACT_APP_EMAILJS_TEMPLATEID;
-    const userId = process.env.REACT_APP_EMAILJS_USERID;
-    const emailContent = {
+    setErrorMessage()
+    if(form.firstName === '' || form.lastName === '' || form.email === '' || form.subject === '' || form.message === ''){
+      setSubmissionErrored(true)
+      setErrorMessage('All fields must be filled to submit.')
+      setIsSubmitted(true)
+      return
+    }
+    console.log('here')
+    const email = {
       from_name: form.firstName + " " + form.lastName,
       from_email: form.email,
       message: form.message
     };
+    const template = process.env.REACT_APP_EMAILJS_TEMPLATEID;
+    const userId = process.env.REACT_APP_EMAILJS_USERID;
     
-    window.emailjs.send('default_service', template, emailContent, userId)
+    await window.emailjs.send('default_servic', template, email, userId)
       .then(res => {
-        console.log(res)
+        setForm(initialFormState);
       })
       .catch(err => {
-        console.log(err)
+        setSubmissionErrored(true)
       })
-    setForm(initialFormState);
+    setIsSubmitted(true);
   };
+
+  const closeBanner = () => {
+    setIsSubmitted(false);
+    setSubmissionErrored(false)
+  }
 
   return (
     <div className="container mx-auto mt-10 px-4 h-full 0">
       <div className="flex content-center items-center justify-center h-full">
-        <div className="w-full lg:w-2/3 xl:1/2 2xl:1/3 px-4">
+        <div className="w-full lg:w-2/3 xl:w-1/2 px-4">
+          {
+            isSubmitted
+            ?
+            <FormBanner close={closeBanner} success={!submissionErrored} errorMessage={errorMessage}/>
+            :
+            <>
+            </>
+          }
           <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-100 border-0">
-            <div className="flex-auto px-4 lg:px-10 py-10 ">
-              <form onSubmit={(e) => handleSubmit(e)}>
+            <div className="flex-auto px-4 lg:px-10 py-10">
+              <form onSubmit={(e) => handleFormSubmit(e)}>
                 <div className="flex ">
                   <div className="relative md:w-full mb-3 mr-8">
-                    <label className="inline-flex items-center cursor-pointer text-gray-700">
+                    <label className="inline-flex items-center text-gray-700">
                       First Name
                     </label>
                     <input
@@ -57,7 +82,7 @@ export default function ContactForm() {
                     />
                   </div>
                   <div className="relative md:w-full mb-3">
-                    <label className="inline-flex items-center cursor-pointer text-gray-700">
+                    <label className="inline-flex items-center text-gray-700">
                       Last Name
                     </label>
                     <input
@@ -70,7 +95,7 @@ export default function ContactForm() {
                   </div>
                 </div>
                 <div className="relative w-full mb-3">
-                  <label className="inline-flex items-center cursor-pointer text-gray-700">
+                  <label className="inline-flex items-center text-gray-700">
                     Email
                   </label>
                   <input
@@ -83,7 +108,7 @@ export default function ContactForm() {
                 </div>
 
                 <div className="relative w-full mb-3 text-gray-700">
-                  <label className="inline-flex items-center cursor-pointer">
+                  <label className="inline-flex items-center">
                     Subject
                   </label>
                   <input
@@ -95,7 +120,7 @@ export default function ContactForm() {
                   />
                 </div>
                 <div className="relative w-full mb-3">
-                  <label className="inline-flex items-center cursor-pointer text-gray-700">
+                  <label className="inline-flex items-center text-gray-700">
                     Message
                   </label>
                   <textarea

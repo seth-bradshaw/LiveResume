@@ -4,23 +4,6 @@ import "./project_card.css";
 export default function ProjectCard(props) {
   const { project, toggleProjectVisibility } = props;
 
-  // const elementInViewPort = (id) => {
-  //   let element = document.getElementById(id)
-  //   let bounding = element.getBoundingClientRect();
-    
-  //   if (bounding.top >= 0 && bounding.left >= 0 && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)){
-      
-  //     element.classList.add('animate-fade-in-left')
-  //   }
-  //   else {
-  //     element.classList.add("hidden")
-  //   }
-  // }
-
-  // window.addEventListener('scroll', () => {
-  //   elementInViewPort(project.id)
-  // })
-
   return (
     <div
       className={

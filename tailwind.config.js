@@ -22,7 +22,8 @@ module.exports = {
       },
       animation: {
         'fade-in-left': 'fade-in-left 1s ease-out'
-      }
+      },
+      scale: ['group-hover'],
     },
   },
   variants: {
