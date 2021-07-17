@@ -3,36 +3,6 @@ import PageTitle from "../general/titles/PageTitle";
 import SkillsList from "./SkillsList";
 
 export default function SkillsPage() {
-  const options = {
-    responsive: true,
-    scale: {
-      ticks: {
-        beginAtZero: true,
-        stepSize: 1,
-      },
-      max: 5,
-    },
-  };
-
-  const getData = (skillData, skillLabel) => {
-    const data = {
-      labels: ["Experience (years)", "Proficency", "Enjoyment"],
-      datasets: [
-        {
-          label: skillLabel,
-          data: skillData,
-          backgroundColor: [
-            "rgba(255, 159, 64, 0.5)",
-            "rgba(54, 162, 235, 0.5)",
-            "rgba(255, 206, 86, 0.5)",
-          ],
-          borderWidth: 1,
-        },
-      ],
-    };
-    return data;
-  };
-
   const skills = [
     {
       id: 99,
