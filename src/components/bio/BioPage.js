@@ -4,7 +4,10 @@ import PageTitle from "../general/titles/PageTitle";
 export default function BioPage() {
   return (
     <div className="min-h-screen p-5 content mb-12 ">
-      <div className="mt-14 flex flex-col items-center justify-center pt-2" id="about_me_section">
+      <div
+        className="mt-14 flex flex-col items-center justify-center pt-2"
+        id="about_me_section"
+      >
         <PageTitle title="Hi, my name is Seth" />
         <span className="mt-0">
           <img
