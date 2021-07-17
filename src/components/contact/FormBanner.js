@@ -4,7 +4,7 @@ export default function FormBanner(props) {
   const {
     close,
     success,
-    errorMessage = "There was an issue with your submission. Please try again.",
+    errorMessage,
   } = props;
   return (
     <div
@@ -38,7 +38,7 @@ export default function FormBanner(props) {
       <span className="text-white">
         <i
           className="fas fa-times fa-lg cursor-pointer"
-          onClick={(e) => close(e)}
+          onClick={() => close()}
         ></i>
       </span>
     </div>

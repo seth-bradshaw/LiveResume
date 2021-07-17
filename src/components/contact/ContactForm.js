@@ -46,7 +46,7 @@ export default function ContactForm() {
     const userId = process.env.REACT_APP_EMAILJS_USERID;
 
     await window.emailjs
-      .send("default_service", template, email, userId)
+      .send("default_servic", template, email, userId)
       .then((res) => {
         setForm(initialFormState);
       })
