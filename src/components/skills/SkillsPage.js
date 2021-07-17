@@ -1,7 +1,6 @@
 import React from "react";
 import PageTitle from "../general/titles/PageTitle";
 import SkillsList from "./SkillsList";
-import { PolarArea } from "react-chartjs-2";
 
 export default function SkillsPage() {
   const options = {
@@ -44,19 +43,6 @@ export default function SkillsPage() {
           </span>
         );
       },
-      getStats: () => {
-        return (
-          <div className="flex flex-col justify-items-center rounded-md p-3 h-full">
-            <div className="flex h-5/6 w-5/6 m-auto">
-              <PolarArea
-                data={() => getData([2, 3, 4], "Javascript")}
-                options={options}
-                className="bg-white h-full w-full"
-              />
-            </div>
-          </div>
-        );
-      },
       title: "Javascript",
     },
     {
@@ -66,19 +52,6 @@ export default function SkillsPage() {
           <span className="text-red-600">
             <i className="fab fa-java fa-9x"></i>
           </span>
-        );
-      },
-      getStats: () => {
-        return (
-          <div className="flex flex-col justify-items-center rounded-md p-3 h-full">
-            <div className="flex h-5/6 w-5/6 m-auto">
-              <PolarArea
-                data={() => getData([0.75, 2.5, 5], "Java")}
-                options={options}
-                className="bg-white h-full w-full"
-              />
-            </div>
-          </div>
         );
       },
       title: "Java",
@@ -92,19 +65,6 @@ export default function SkillsPage() {
           </span>
         );
       },
-      getStats: () => {
-        return (
-          <div className="flex flex-col justify-items-center rounded-md p-3 h-full">
-            <div className="flex h-5/6 w-5/6 m-auto">
-              <PolarArea
-                data={() => getData([0.75, 2, 4], "Python")}
-                options={options}
-                className="bg-white h-full w-full"
-              />
-            </div>
-          </div>
-        );
-      },
       title: "Python",
     },
     {
@@ -114,19 +74,6 @@ export default function SkillsPage() {
           <span className="text-purple-600">
             <i className="fab fa-react fa-9x"></i>
           </span>
-        );
-      },
-      getStats: () => {
-        return (
-          <div className="flex flex-col justify-items-center rounded-md p-3 h-full">
-            <div className="flex h-5/6 w-5/6 m-auto">
-              <PolarArea
-                data={() => getData([1, 3, 5], "React")}
-                options={options}
-                className="bg-white h-full w-full"
-              />
-            </div>
-          </div>
         );
       },
       title: "React",
@@ -140,19 +87,6 @@ export default function SkillsPage() {
           </span>
         );
       },
-      getStats: () => {
-        return (
-          <div className="flex flex-col justify-items-center rounded-md p-3 h-full">
-            <div className="flex h-5/6 w-5/6 m-auto">
-              <PolarArea
-                data={() => getData([2, 3, 3], "Html5")}
-                options={options}
-                className="bg-white h-full w-full"
-              />
-            </div>
-          </div>
-        );
-      },
       title: "HTML",
     },
     {
@@ -162,19 +96,6 @@ export default function SkillsPage() {
           <span className="text-green-600">
             <i className="fab fa-linux fa-9x"></i>
           </span>
-        );
-      },
-      getStats: () => {
-        return (
-          <div className="flex flex-col justify-items-center rounded-md p-3 h-full">
-            <div className="flex h-5/6 w-5/6 m-auto">
-              <PolarArea
-                data={() => getData([0.5, 1.5, 4], "Linux")}
-                options={options}
-                className="bg-white h-full w-full"
-              />
-            </div>
-          </div>
         );
       },
       title: "Linux",
