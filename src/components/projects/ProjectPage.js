@@ -16,7 +16,7 @@ const initialState = [
     getBackContent: (toggleDescription) => {
       return (
         <div className="flex h-full w-full p-2 pt-5 rounded-full flex-col items-center justify-center bg-gray-100">
-          <p className="text-4xl text-gray-800 font-bold my-3">Tech Stack:</p>
+          <p className="text-4xl text-gray-800 font-bold my-3">Namaste:</p>
           <div className="flex justify-center items-center flex-col">
 
           <div className="text-md text-gray-800">
@@ -50,7 +50,7 @@ const initialState = [
     getBackContent: (toggleDescription) => {
       return (
         <div className="flex h-full w-full p-2 pt-5 rounded-full flex-col items-center justify-center bg-gray-100">
-          <p className="text-4xl text-gray-800 font-bold my-3">Tech Stack:</p>
+          <p className="text-4xl text-gray-800 font-bold my-3">Bug Tracker:</p>
           <div className="flex justify-center items-center flex-col">
 
           <div className="text-md text-gray-800">
@@ -84,7 +84,7 @@ const initialState = [
     getBackContent: (toggleDescription) => {
       return (
         <div className="flex h-full w-full p-2 pt-5 rounded-full flex-col items-center justify-center bg-gray-100">
-        <p className="text-4xl text-gray-800 font-bold my-3">Tech Stack:</p>
+        <p className="text-4xl text-gray-800 font-bold my-3">Todo List:</p>
         <div className="flex justify-center items-center flex-col">
 
         <div className="text-md text-gray-800">
