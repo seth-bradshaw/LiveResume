@@ -3,9 +3,9 @@ import PageTitle from "./titles/PageTitle";
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-between content">
+    <div className="h-screen flex flex-col items-center justify-between content">
       <div></div>
-      <div className="h-full">
+      <div>
         <PageTitle title="Welcome." />
       </div>
       <div className="mb-5 scrollicon">
