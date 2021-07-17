@@ -2,6 +2,18 @@ import React from "react";
 import PageTitle from "./titles/PageTitle";
 
 export default function LandingPage() {
+  window.addEventListener('scroll', () => {
+    console.log('here')
+    const currentScroll = window.pageYOffset;
+    let opacity;
+    if (currentScroll <= 500) {
+      opacity = 1 - currentScroll / 500;
+    } else {
+      opacity = 0;
+    }
+    document.querySelector(".scrollicon").style.opacity = opacity;
+  })
+
   return (
     <div className="h-screen flex flex-col items-center justify-between content">
       <div></div>
