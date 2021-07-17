@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-scroll";
 
 export default function NavBar() {
@@ -81,7 +81,7 @@ export default function NavBar() {
             className="text-white cursor-pointer"
             onClick={(e) => toggleNavBar(e)}
           >
-            <i className="fas fa-times fa-2x"></i>
+            <FontAwesomeIcon icon={faTimes} size="2x" />
           </span>
         )}
       </div>

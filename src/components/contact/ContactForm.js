@@ -10,11 +10,13 @@ const initialFormState = {
   message: "",
 };
 
+const defaultError = "There was an issue with your submission. Please try again."
+
 export default function ContactForm() {
   const [form, setForm] = useState(initialFormState);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submissionErrored, setSubmissionErrored] = useState(false);
-  const [errorMessage, setErrorMessage] = useState();
+  const [errorMessage, setErrorMessage] = useState(defaultError);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,7 +25,6 @@ export default function ContactForm() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    setErrorMessage();
     if (
       form.firstName === "" ||
       form.lastName === "" ||
@@ -59,6 +60,7 @@ export default function ContactForm() {
   const closeBanner = () => {
     setIsSubmitted(false);
     setSubmissionErrored(false);
+    setErrorMessage(defaultError);
   };
 
   return (

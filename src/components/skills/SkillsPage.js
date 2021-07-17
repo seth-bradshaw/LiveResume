@@ -1,6 +1,8 @@
 import React from "react";
 import PageTitle from "../general/titles/PageTitle";
 import SkillsList from "./SkillsList";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faJs, faJava, faPython, faReact, faHtml5, faLinux } from '@fortawesome/free-brands-svg-icons'
 
 export default function SkillsPage() {
   const skills = [
@@ -9,7 +11,7 @@ export default function SkillsPage() {
       getIcon: () => {
         return (
           <span className="text-yellow-300">
-            <i className="fab fa-js fa-9x"></i>
+              <FontAwesomeIcon icon={faJs} size="9x" />
           </span>
         );
       },
@@ -20,7 +22,7 @@ export default function SkillsPage() {
       getIcon: () => {
         return (
           <span className="text-red-600">
-            <i className="fab fa-java fa-9x"></i>
+            <FontAwesomeIcon icon={faJava} size="9x" />
           </span>
         );
       },
@@ -31,7 +33,7 @@ export default function SkillsPage() {
       getIcon: () => {
         return (
           <span className="text-blue-600">
-            <i className="fab fa-python fa-9x"></i>
+            <FontAwesomeIcon icon={faPython} size="9x" />
           </span>
         );
       },
@@ -42,7 +44,7 @@ export default function SkillsPage() {
       getIcon: () => {
         return (
           <span className="text-purple-600">
-            <i className="fab fa-react fa-9x"></i>
+            <FontAwesomeIcon icon={faReact} size="9x" />
           </span>
         );
       },
@@ -53,7 +55,7 @@ export default function SkillsPage() {
       getIcon: () => {
         return (
           <span className="text-yellow-600">
-            <i className="fab fa-html5 fa-9x"></i>
+            <FontAwesomeIcon icon={faHtml5} size="9x" />
           </span>
         );
       },
@@ -64,7 +66,7 @@ export default function SkillsPage() {
       getIcon: () => {
         return (
           <span className="text-green-600">
-            <i className="fab fa-linux fa-9x"></i>
+            <FontAwesomeIcon icon={faLinux} size="9x" />
           </span>
         );
       },

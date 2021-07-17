@@ -6,19 +6,18 @@ import BioPage from "./components/bio/BioPage";
 import SkillsPage from "./components/skills/SkillsPage";
 import ProjectPage from "./components/projects/ProjectPage";
 import Footer from "./components/general/footer/Footer";
-import "./index.css";
-
-const [red, green, blue] = [81, 226, 245];
-const root = document.querySelector(".root");
-
-window.addEventListener("scroll", () => {
-  const y = 1 + (window.scrollY || window.pageYOffset) / 1000;
-  const [r, g, b] = [red / y, green / y, blue / y].map(Math.round);
-
-  root.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-});
 
 function App() {
+  const [red, green, blue] = [81, 226, 245];
+  const root = document.querySelector(".root");
+
+  window.addEventListener("scroll", () => {
+    const y = 1 + (window.scrollY || window.pageYOffset) / 1000;
+    const [r, g, b] = [red / y, green / y, blue / y].map(Math.round);
+
+    root.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+  });
+
   return (
     <div>
       <NavBar />

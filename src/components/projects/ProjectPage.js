@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import PageTitle from "../general/titles/PageTitle";
 import ProjectList from "./ProjectList";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLink, faChevronDown, faBug, faListAlt } from "@fortawesome/free-solid-svg-icons";
 
 const initialState = [
   {
@@ -31,7 +34,7 @@ const initialState = [
                 target="_blank"
                 rel="noreferrer"
               >
-                <i className="fas fa-link fa-lg cursor-pointer"></i>
+                <FontAwesomeIcon icon={faLink} size="lg" className="cursor-pointer" />
               </a>
             </span>
             <span className="p-2 text-gray-800">
@@ -40,14 +43,11 @@ const initialState = [
                 target="_blank"
                 rel="noreferrer"
               >
-                <i className="fab fa-github fa-lg cursor-pointer"></i>
+                <FontAwesomeIcon icon={faGithub} size="lg" className="cursor-pointer" />
               </a>
             </span>
             <span className="p-2 text-gray-800 md:hidden">
-              <i
-                className="fas fa-chevron-down fa-lg cursor-pointer"
-                onClick={() => toggleDescription(1)}
-              ></i>
+              <FontAwesomeIcon icon={faChevronDown} size="lg" className="cursor-pointer" onClick={() => toggleDescription(1)} />
             </span>
           </div>
         </div>
@@ -63,7 +63,7 @@ const initialState = [
     getIcon: () => {
       return (
         <div className="flex h-5/6 w-5/6 p-2 rounded-full items-center justify-center bg-gray-900 border-gray-800">
-          <i className="fas fa-bug fa-7x sm:fa-9x text-white"></i>
+          <FontAwesomeIcon icon={faBug} size="8x" className="text-white" />
         </div>
       );
     },
@@ -85,7 +85,7 @@ const initialState = [
                 target="_blank"
                 rel="noreferrer"
               >
-                <i className="fas fa-link fa-lg cursor-pointer"></i>
+                <FontAwesomeIcon icon={faLink} size="lg" className="cursor-pointer" />
               </a>
             </span>
             <span className="p-2 text-gray-800">
@@ -94,14 +94,11 @@ const initialState = [
                 target="_blank"
                 rel="noreferrer"
               >
-                <i className="fab fa-github fa-lg cursor-pointer"></i>
+                <FontAwesomeIcon icon={faGithub} size="lg" className="cursor-pointer" />
               </a>
             </span>
             <span className="p-2 text-gray-800 md:hidden">
-              <i
-                className="fas fa-chevron-down fa-lg cursor-pointer"
-                onClick={() => toggleDescription(2)}
-              ></i>
+              <FontAwesomeIcon icon={faChevronDown} size="lg" className="cursor-pointer" onClick={() => toggleDescription(2)} />
             </span>
           </div>
         </div>
@@ -117,7 +114,7 @@ const initialState = [
     getIcon: () => {
       return (
         <div className="flex h-5/6 w-5/6 p-2 rounded-full items-center justify-center bg-blue-600">
-          <i class="fas fa-list-alt fa-7x lg:fa-9x text-white"></i>
+          <FontAwesomeIcon icon={faListAlt} size="8x" className="text-white"/>
         </div>
       );
     },
@@ -139,7 +136,7 @@ const initialState = [
                 target="_blank"
                 rel="noreferrer"
               >
-                <i className="fas fa-link fa-lg cursor-pointer"></i>
+                <FontAwesomeIcon icon={faLink} size="lg" className="cursor-pointer" />
               </a>
             </span>
             <span className="p-2 text-gray-800">
@@ -148,14 +145,11 @@ const initialState = [
                 target="_blank"
                 rel="noreferrer"
               >
-                <i className="fab fa-github fa-lg cursor-pointer"></i>
+                <FontAwesomeIcon icon={faGithub} size="lg" className="cursor-pointer" />
               </a>
             </span>
             <span className="p-2 text-gray-800 md:hidden">
-              <i
-                className="fas fa-chevron-down fa-lg cursor-pointer"
-                onClick={() => toggleDescription(3)}
-              ></i>
+              <FontAwesomeIcon icon={faChevronDown} size="lg" className="cursor-pointer" onClick={() => toggleDescription(3)} />
             </span>
           </div>
         </div>

@@ -1,11 +1,11 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
+import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 export default function FormBanner(props) {
-  const {
-    close,
-    success,
-    errorMessage = "There was an issue with your submission. Please try again.",
-  } = props;
+  const { close, success, errorMessage } = props;
   return (
     <div
       className={`w-full h-14 mb-4 rounded-md ${
@@ -19,11 +19,11 @@ export default function FormBanner(props) {
           } p-2 w-10 h-10 rounded-md mr-2`}
         >
           <span className="text-white">
-            <i
-              class={`far ${
-                success ? "fa-thumbs-up" : "fa-exclamation-circle"
-              } fa-lg`}
-            ></i>
+            {success ? (
+              <FontAwesomeIcon icon={faThumbsUp} size="lg" />
+            ) : (
+              <FontAwesomeIcon icon={faExclamationCircle} size="lg" />
+            )}
           </span>
         </div>
         <div className="text-left flex items-center">
@@ -36,10 +36,12 @@ export default function FormBanner(props) {
         </div>
       </div>
       <span className="text-white">
-        <i
-          className="fas fa-times fa-lg cursor-pointer"
-          onClick={(e) => close(e)}
-        ></i>
+        <FontAwesomeIcon
+          icon={faTimes}
+          size="lg"
+          onClick={() => close()}
+          className="cursor-pointer"
+        />
       </span>
     </div>
   );
