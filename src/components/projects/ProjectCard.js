@@ -37,25 +37,28 @@ export default function ProjectCard(props) {
             </p>
           </div>
           {project.showDescription ? (
-               <div className="w-full p-5 m-auto mt-5 md:hidden text-center border border-white rounded-md">
+            <div className="w-full p-5 m-auto mt-5 md:hidden text-center border border-white rounded-md">
               <p className="text-white m-auto w-full text-md lg:text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              egestas, est sed convallis lacinia, tortor mi sagittis nulla, et
-              sagittis purus quam tincidunt odio. Donec vitae sodales arcu.
-              Donec in ex quis magna efficitur condimentum vel eu magna. Donec
-              eu ipsum nibh. Donec augue massa, porttitor sit amet dolor sit
-              amet, tempor interdum nunc. Quisque scelerisque consequat ante,
-              sagittis
-            </p>
-              </div>
-            ) : (
-              <></>
-            )}
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                egestas, est sed convallis lacinia, tortor mi sagittis nulla, et
+                sagittis purus quam tincidunt odio. Donec vitae sodales arcu.
+                Donec in ex quis magna efficitur condimentum vel eu magna. Donec
+                eu ipsum nibh. Donec augue massa, porttitor sit amet dolor sit
+                amet, tempor interdum nunc. Quisque scelerisque consequat ante,
+                sagittis
+              </p>
+            </div>
+          ) : (
+            <></>
+          )}
         </div>
       ) : (
-        <div className="w-full h-full flex flex-col md:flex-row items-center p-3 rounded-md" id={project.id}>
+        <div
+          className="w-full h-full flex flex-col md:flex-row items-center p-3 rounded-md"
+          id={project.id}
+        >
           <div className="w-2/3 mr-5 h-full md:flex md:flex-col text-center items-center hidden">
-          <p className="text-white m-auto w-full text-md lg:text-lg">
+            <p className="text-white m-auto w-full text-md lg:text-lg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
               egestas, est sed convallis lacinia, tortor mi sagittis nulla, et
               sagittis purus quam tincidunt odio. Donec vitae sodales arcu.
@@ -76,20 +79,20 @@ export default function ProjectCard(props) {
             </div>
           </div>
           {project.showDescription ? (
-               <div className="w-full p-5 m-auto mt-5 md:hidden text-center border border-white rounded-md">
+            <div className="w-full p-5 m-auto mt-5 md:hidden text-center border border-white rounded-md">
               <p className="text-white m-auto w-full text-md lg:text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              egestas, est sed convallis lacinia, tortor mi sagittis nulla, et
-              sagittis purus quam tincidunt odio. Donec vitae sodales arcu.
-              Donec in ex quis magna efficitur condimentum vel eu magna. Donec
-              eu ipsum nibh. Donec augue massa, porttitor sit amet dolor sit
-              amet, tempor interdum nunc. Quisque scelerisque consequat ante,
-              sagittis
-            </p>
-              </div>
-            ) : (
-              <></>
-            )}
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                egestas, est sed convallis lacinia, tortor mi sagittis nulla, et
+                sagittis purus quam tincidunt odio. Donec vitae sodales arcu.
+                Donec in ex quis magna efficitur condimentum vel eu magna. Donec
+                eu ipsum nibh. Donec augue massa, porttitor sit amet dolor sit
+                amet, tempor interdum nunc. Quisque scelerisque consequat ante,
+                sagittis
+              </p>
+            </div>
+          ) : (
+            <></>
+          )}
         </div>
       )}
     </div>
