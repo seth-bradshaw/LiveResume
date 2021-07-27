@@ -8,6 +8,7 @@ export default function ProjectList(props) {
         <div className="flex flex-col justify-center items-center">
             {
                list.map((project) => {
+                   console.log(project.description)
                    return <ProjectCard project={project} toggleProjectVisibility={toggleProjectVisibility} key={project.id}/>
                }) 
             }

@@ -3,6 +3,7 @@ import "./project_card.css";
 
 export default function ProjectCard(props) {
   const { project, toggleProjectVisibility } = props;
+  console.log(project.description)
 
   return (
     <div
@@ -27,25 +28,13 @@ export default function ProjectCard(props) {
           </div>
           <div className="w-2/3 ml-5 h-full md:flex md:flex-col lg:w-7/12 xl:w-3/5 text-center items-center hidden">
             <p className="text-white m-auto w-full text-md lg:text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              egestas, est sed convallis lacinia, tortor mi sagittis nulla, et
-              sagittis purus quam tincidunt odio. Donec vitae sodales arcu.
-              Donec in ex quis magna efficitur condimentum vel eu magna. Donec
-              eu ipsum nibh. Donec augue massa, porttitor sit amet dolor sit
-              amet, tempor interdum nunc. Quisque scelerisque consequat ante,
-              sagittis
+              {project.description}
             </p>
           </div>
           {project.showDescription ? (
             <div className="w-full p-5 m-auto mt-5 md:hidden text-center border border-white rounded-md">
               <p className="text-white m-auto w-full text-md lg:text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                egestas, est sed convallis lacinia, tortor mi sagittis nulla, et
-                sagittis purus quam tincidunt odio. Donec vitae sodales arcu.
-                Donec in ex quis magna efficitur condimentum vel eu magna. Donec
-                eu ipsum nibh. Donec augue massa, porttitor sit amet dolor sit
-                amet, tempor interdum nunc. Quisque scelerisque consequat ante,
-                sagittis
+{project.description}
               </p>
             </div>
           ) : (
@@ -59,13 +48,7 @@ export default function ProjectCard(props) {
         >
           <div className="w-2/3 mr-5 h-full md:flex md:flex-col text-center items-center hidden">
             <p className="text-white m-auto w-full text-md lg:text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              egestas, est sed convallis lacinia, tortor mi sagittis nulla, et
-              sagittis purus quam tincidunt odio. Donec vitae sodales arcu.
-              Donec in ex quis magna efficitur condimentum vel eu magna. Donec
-              eu ipsum nibh. Donec augue massa, porttitor sit amet dolor sit
-              amet, tempor interdum nunc. Quisque scelerisque consequat ante,
-              sagittis
+            {project.description}
             </p>
           </div>
           <div className="w-64 h-64 lg:w-80 lg:h-80 flex items-center justify-center rounded-full bg-white m-auto flip lg:hover:none">
@@ -81,13 +64,7 @@ export default function ProjectCard(props) {
           {project.showDescription ? (
             <div className="w-full p-5 m-auto mt-5 md:hidden text-center border border-white rounded-md">
               <p className="text-white m-auto w-full text-md lg:text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                egestas, est sed convallis lacinia, tortor mi sagittis nulla, et
-                sagittis purus quam tincidunt odio. Donec vitae sodales arcu.
-                Donec in ex quis magna efficitur condimentum vel eu magna. Donec
-                eu ipsum nibh. Donec augue massa, porttitor sit amet dolor sit
-                amet, tempor interdum nunc. Quisque scelerisque consequat ante,
-                sagittis
+              {project.description}
               </p>
             </div>
           ) : (
