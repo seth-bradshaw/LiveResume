@@ -81,6 +81,8 @@ const initialState = [
         href="https://www.health.harvard.edu/healthbeat/giving-thanks-can-make-you-happier"
         target="_blank"
         alt="harvard graitutde studies"
+        rel="noreferrer"
+        className="text-blue-600"
       >
         Studies
       </a>,
@@ -231,7 +233,7 @@ export default function ProjectPage() {
     });
     setProjects(newProjects);
   };
-  
+
   return (
     <div className="content pt-5 h-full mb-12" id="projects_section">
       <PageTitle title="My Projects" />
