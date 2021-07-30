@@ -217,7 +217,7 @@ const initialState = [
     isVisible: true,
     isLeft: true,
     showDescription: false,
-    description: "Everyone loves a good todo app! This app is very UI friendly and I wanted to build this to increase my own productivity, while also displaying my skills to develop an API capable of CRUM operations, and then linking it to the front end.",
+    description: "Everyone loves a good todo app! This app is very UI friendly and I wanted to build this to increase my own productivity, while also displaying my skills to develop an API capable of CRUD operations, and then linking it to the front end.",
   },
 ];
 
