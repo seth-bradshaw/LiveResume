@@ -21,9 +21,6 @@ export default function Header() {
             <li>
               <Nav label="projects" href="project" />
             </li>
-            <li>
-              <Nav label="contact" href="contact" />
-            </li>
           </ul>
         </nav>
       </div>
