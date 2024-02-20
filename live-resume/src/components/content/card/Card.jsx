@@ -50,6 +50,7 @@ export default function Card({
                   href={link.to}
                   target="_blank"
                   rel="noreferrer noopener"
+                  key={link}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +69,7 @@ export default function Card({
           <ul className="mt-2 flex flex-wrap" aria-label="technologies used">
             {
                 technologies.length > 0 && technologies.map((technology) => (
-                    <li class="mr-1.5 mt-2">
+                    <li class="mr-1.5 mt-2" key={technology}>
                         <div class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">
                         {technology}
                         </div>
